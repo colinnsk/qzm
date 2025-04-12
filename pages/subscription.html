@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>一键出片 - 订阅服务</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        .status-bar {
+            height: 44px;
+            background: #000;
+            color: white;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0 16px;
+            font-size: 14px;
+        }
+        .subscription-card {
+            border: 2px solid transparent;
+            transition: all 0.3s;
+        }
+        .subscription-card:hover {
+            border-color: #07C160;
+        }
+        .subscription-card.selected {
+            border-color: #07C160;
+            background: rgba(7, 193, 96, 0.05);
+        }
+    </style>
+</head>
+<body class="bg-gray-50">
+    <!-- 状态栏 -->
+    <div class="status-bar">
+        <div>9:41</div>
+        <div class="flex space-x-2">
+            <i class="fas fa-signal"></i>
+            <i class="fas fa-wifi"></i>
+            <i class="fas fa-battery-full"></i>
+        </div>
+    </div>
+
+    <!-- 主要内容 -->
+    <div class="p-4">
+        <!-- 顶部导航 -->
+        <div class="flex items-center mb-6">
+            <button class="text-gray-600">
+                <i class="fas fa-arrow-left"></i>
+            </button>
+            <h1 class="text-xl font-bold mx-auto">订阅服务</h1>
+        </div>
+
+        <!-- 会员特权 -->
+        <div class="bg-white rounded-xl p-6 shadow-sm mb-6">
+            <h2 class="text-lg font-semibold mb-4">会员特权</h2>
+            <div class="grid grid-cols-2 gap-4">
+                <div class="flex items-center">
+                    <div class="w-10 h-10 bg-blue-100 rounded-full flex items-center justify-center mr-3">
+                        <i class="fas fa-bolt text-blue-500"></i>
+                    </div>
+                    <span class="text-sm">优先处理</span>
+                </div>
+                <div class="flex items-center">
+                    <div class="w-10 h-10 bg-purple-100 rounded-full flex items-center justify-center mr-3">
+                        <i class="fas fa-magic text-purple-500"></i>
+                    </div>
+                    <span class="text-sm">高级修复</span>
+                </div>
+                <div class="flex items-center">
+                    <div class="w-10 h-10 bg-green-100 rounded-full flex items-center justify-center mr-3">
+                        <i class="fas fa-infinity text-green-500"></i>
+                    </div>
+                    <span class="text-sm">无限次数</span>
+                </div>
+                <div class="flex items-center">
+                    <div class="w-10 h-10 bg-yellow-100 rounded-full flex items-center justify-center mr-3">
+                        <i class="fas fa-percentage text-yellow-500"></i>
+                    </div>
+                    <span class="text-sm">专属折扣</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- 订阅套餐 -->
+        <div class="space-y-4 mb-6">
+            <div class="subscription-card bg-white rounded-xl p-4 shadow-sm">
+                <div class="flex justify-between items-start mb-4">
+                    <div>
+                        <h3 class="font-semibold">月度会员</h3>
+                        <p class="text-sm text-gray-500">适合短期使用</p>
+                    </div>
+                    <div class="text-right">
+                        <p class="text-2xl font-bold">¥29.9</p>
+                        <p class="text-sm text-gray-500">/月</p>
+                    </div>
+                </div>
+                <ul class="space-y-2 text-sm mb-4">
+                    <li class="flex items-center">
+                        <i class="fas fa-check text-green-500 mr-2"></i>
+                        <span>无限次视频处理</span>
+                    </li>
+                    <li class="flex items-center">
+                        <i class="fas fa-check text-green-500 mr-2"></i>
+                        <span>优先处理队列</span>
+                    </li>
+                    <li class="flex items-center">
+                        <i class="fas fa-check text-green-500 mr-2"></i>
+                        <span>基础修复功能</span>
+                    </li>
+                </ul>
+                <button class="w-full py-2 border border-gray-300 rounded-full text-sm font-medium">
+                    选择套餐
+                </button>
+            </div>
+
+            <div class="subscription-card selected bg-white rounded-xl p-4 shadow-sm">
+                <div class="flex justify-between items-start mb-4">
+                    <div>
+                        <h3 class="font-semibold">年度会员</h3>
+                        <p class="text-sm text-gray-500">最受欢迎</p>
+                    </div>
+                    <div class="text-right">
+                        <p class="text-2xl font-bold">¥299</p>
+                        <p class="text-sm text-gray-500">/年</p>
+                    </div>
+                </div>
+                <div class="bg-green-50 text-green-600 text-xs px-2 py-1 rounded-full inline-block mb-4">
+                    节省 ¥59.8
+                </div>
+                <ul class="space-y-2 text-sm mb-4">
+                    <li class="flex items-center">
+                        <i class="fas fa-check text-green-500 mr-2"></i>
+                        <span>无限次视频处理</span>
+                    </li>
+                    <li class="flex items-center">
+                        <i class="fas fa-check text-green-500 mr-2"></i>
+                        <span>优先处理队列</span>
+                    </li>
+                    <li class="flex items-center">
+                        <i class="fas fa-check text-green-500 mr-2"></i>
+                        <span>高级修复功能</span>
+                    </li>
+                    <li class="flex items-center">
+                        <i class="fas fa-check text-green-500 mr-2"></i>
+                        <span>专属客服支持</span>
+                    </li>
+                </ul>
+                <button class="w-full py-2 bg-green-500 text-white rounded-full text-sm font-medium">
+                    立即开通
+                </button>
+            </div>
+        </div>
+
+        <!-- 支付方式 -->
+        <div class="bg-white rounded-xl p-4 shadow-sm mb-6">
+            <h2 class="text-lg font-semibold mb-4">支付方式</h2>
+            <div class="space-y-4">
+                <div class="flex items-center justify-between">
+                    <div class="flex items-center">
+                        <div class="w-10 h-10 bg-blue-100 rounded-full flex items-center justify-center mr-3">
+                            <i class="fab fa-weixin text-green-500"></i>
+                        </div>
+                        <span>微信支付</span>
+                    </div>
+                    <i class="fas fa-check text-green-500"></i>
+                </div>
+                <div class="flex items-center justify-between">
+                    <div class="flex items-center">
+                        <div class="w-10 h-10 bg-blue-100 rounded-full flex items-center justify-center mr-3">
+                            <i class="fab fa-alipay text-blue-500"></i>
+                        </div>
+                        <span>支付宝</span>
+                    </div>
+                    <i class="fas fa-circle text-gray-200"></i>
+                </div>
+            </div>
+        </div>
+
+        <!-- 服务协议 -->
+        <div class="text-center text-xs text-gray-500 mb-6">
+            <p>开通即表示同意 <a href="#" class="text-blue-500">《用户协议》</a> 和 <a href="#" class="text-blue-500">《隐私政策》</a></p>
+        </div>
+
+        <!-- 支付按钮 -->
+        <div class="fixed bottom-0 left-0 right-0 p-4 bg-white shadow-lg">
+            <button class="w-full bg-green-500 text-white py-3 rounded-full font-medium">
+                立即支付 ¥299
+            </button>
+        </div>
+    </div>
+</body>
+</html>

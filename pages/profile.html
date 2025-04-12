@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>一键出片 - 个人中心</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        .status-bar {
+            height: 44px;
+            background: #000;
+            color: white;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0 16px;
+            font-size: 14px;
+        }
+        .avatar {
+            width: 80px;
+            height: 80px;
+            border-radius: 50%;
+            border: 3px solid white;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+        }
+    </style>
+</head>
+<body class="bg-gray-50">
+    <!-- 状态栏 -->
+    <div class="status-bar">
+        <div>9:41</div>
+        <div class="flex space-x-2">
+            <i class="fas fa-signal"></i>
+            <i class="fas fa-wifi"></i>
+            <i class="fas fa-battery-full"></i>
+        </div>
+    </div>
+
+    <!-- 主要内容 -->
+    <div class="p-4">
+        <!-- 用户信息 -->
+        <div class="bg-gradient-to-r from-blue-500 to-purple-500 rounded-xl p-6 text-white mb-6">
+            <div class="flex items-center">
+                <img src="https://randomuser.me/api/portraits/men/32.jpg" alt="用户头像" class="avatar mr-4">
+                <div>
+                    <h1 class="text-xl font-bold">张三</h1>
+                    <p class="text-sm opacity-80">普通用户</p>
+                </div>
+            </div>
+            <div class="mt-4 flex justify-between">
+                <div class="text-center">
+                    <p class="text-2xl font-bold">12</p>
+                    <p class="text-sm opacity-80">处理视频</p>
+                </div>
+                <div class="text-center">
+                    <p class="text-2xl font-bold">¥15.5</p>
+                    <p class="text-sm opacity-80">累计消费</p>
+                </div>
+                <div class="text-center">
+                    <p class="text-2xl font-bold">3</p>
+                    <p class="text-sm opacity-80">收藏</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- 会员信息 -->
+        <div class="bg-white rounded-xl p-4 shadow-sm mb-6">
+            <div class="flex items-center justify-between">
+                <div>
+                    <h2 class="text-lg font-semibold">会员特权</h2>
+                    <p class="text-sm text-gray-500">未开通会员</p>
+                </div>
+                <button class="bg-gradient-to-r from-blue-500 to-purple-500 text-white px-4 py-2 rounded-full text-sm font-medium">
+                    立即开通
+                </button>
+            </div>
+        </div>
+
+        <!-- 功能列表 -->
+        <div class="bg-white rounded-xl shadow-sm mb-6">
+            <div class="divide-y divide-gray-100">
+                <a href="#" class="flex items-center justify-between p-4">
+                    <div class="flex items-center">
+                        <div class="w-10 h-10 bg-blue-100 rounded-full flex items-center justify-center mr-3">
+                            <i class="fas fa-history text-blue-500"></i>
+                        </div>
+                        <span>历史记录</span>
+                    </div>
+                    <i class="fas fa-chevron-right text-gray-400"></i>
+                </a>
+                <a href="#" class="flex items-center justify-between p-4">
+                    <div class="flex items-center">
+                        <div class="w-10 h-10 bg-purple-100 rounded-full flex items-center justify-center mr-3">
+                            <i class="fas fa-star text-purple-500"></i>
+                        </div>
+                        <span>我的收藏</span>
+                    </div>
+                    <i class="fas fa-chevron-right text-gray-400"></i>
+                </a>
+                <a href="#" class="flex items-center justify-between p-4">
+                    <div class="flex items-center">
+                        <div class="w-10 h-10 bg-green-100 rounded-full flex items-center justify-center mr-3">
+                            <i class="fas fa-wallet text-green-500"></i>
+                        </div>
+                        <span>我的钱包</span>
+                    </div>
+                    <i class="fas fa-chevron-right text-gray-400"></i>
+                </a>
+            </div>
+        </div>
+
+        <!-- 设置列表 -->
+        <div class="bg-white rounded-xl shadow-sm">
+            <div class="divide-y divide-gray-100">
+                <a href="#" class="flex items-center justify-between p-4">
+                    <div class="flex items-center">
+                        <div class="w-10 h-10 bg-gray-100 rounded-full flex items-center justify-center mr-3">
+                            <i class="fas fa-cog text-gray-500"></i>
+                        </div>
+                        <span>设置</span>
+                    </div>
+                    <i class="fas fa-chevron-right text-gray-400"></i>
+                </a>
+                <a href="#" class="flex items-center justify-between p-4">
+                    <div class="flex items-center">
+                        <div class="w-10 h-10 bg-gray-100 rounded-full flex items-center justify-center mr-3">
+                            <i class="fas fa-question-circle text-gray-500"></i>
+                        </div>
+                        <span>帮助与反馈</span>
+                    </div>
+                    <i class="fas fa-chevron-right text-gray-400"></i>
+                </a>
+                <a href="#" class="flex items-center justify-between p-4">
+                    <div class="flex items-center">
+                        <div class="w-10 h-10 bg-gray-100 rounded-full flex items-center justify-center mr-3">
+                            <i class="fas fa-info-circle text-gray-500"></i>
+                        </div>
+                        <span>关于我们</span>
+                    </div>
+                    <i class="fas fa-chevron-right text-gray-400"></i>
+                </a>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

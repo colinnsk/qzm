@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>一键出片 - 原型展示</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        .phone-frame {
+            width: 390px;
+            height: 844px;
+            border-radius: 40px;
+            overflow: hidden;
+            position: relative;
+            box-shadow: 0 0 20px rgba(0,0,0,0.2);
+            margin: 20px;
+            background: #000;
+        }
+        .phone-screen {
+            width: 100%;
+            height: 100%;
+            border: none;
+        }
+        .prototype-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            padding: 20px;
+        }
+        .prototype-title {
+            text-align: center;
+            margin-top: 20px;
+            font-weight: bold;
+            color: #333;
+        }
+    </style>
+</head>
+<body class="bg-gray-100">
+    <div class="container mx-auto py-8">
+        <h1 class="text-3xl font-bold text-center mb-8">一键出片 - 原型展示</h1>
+        <div class="prototype-container">
+            <!-- 首页 -->
+            <div>
+                <div class="phone-frame">
+                    <iframe src="pages/home.html" class="phone-screen"></iframe>
+                </div>
+                <div class="prototype-title">首页</div>
+            </div>
+            
+            <!-- 上传页面 -->
+            <div>
+                <div class="phone-frame">
+                    <iframe src="pages/upload.html" class="phone-screen"></iframe>
+                </div>
+                <div class="prototype-title">上传视频</div>
+            </div>
+            
+            <!-- 处理页面 -->
+            <div>
+                <div class="phone-frame">
+                    <iframe src="pages/process.html" class="phone-screen"></iframe>
+                </div>
+                <div class="prototype-title">视频处理</div>
+            </div>
+            
+            <!-- 预览页面 -->
+            <div>
+                <div class="phone-frame">
+                    <iframe src="pages/preview.html" class="phone-screen"></iframe>
+                </div>
+                <div class="prototype-title">预览效果</div>
+            </div>
+            
+            <!-- 个人中心 -->
+            <div>
+                <div class="phone-frame">
+                    <iframe src="pages/profile.html" class="phone-screen"></iframe>
+                </div>
+                <div class="prototype-title">个人中心</div>
+            </div>
+            
+            <!-- 订阅页面 -->
+            <div>
+                <div class="phone-frame">
+                    <iframe src="pages/subscription.html" class="phone-screen"></iframe>
+                </div>
+                <div class="prototype-title">订阅服务</div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

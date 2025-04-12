@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>一键出片 - 上传视频</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        .status-bar {
+            height: 44px;
+            background: #000;
+            color: white;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0 16px;
+            font-size: 14px;
+        }
+        .upload-area {
+            border: 2px dashed #ddd;
+            border-radius: 16px;
+            transition: all 0.3s;
+        }
+        .upload-area:hover {
+            border-color: #07C160;
+        }
+        .video-preview {
+            aspect-ratio: 16/9;
+            background: #000;
+            border-radius: 12px;
+            overflow: hidden;
+        }
+    </style>
+</head>
+<body class="bg-gray-50">
+    <!-- 状态栏 -->
+    <div class="status-bar">
+        <div>9:41</div>
+        <div class="flex space-x-2">
+            <i class="fas fa-signal"></i>
+            <i class="fas fa-wifi"></i>
+            <i class="fas fa-battery-full"></i>
+        </div>
+    </div>
+
+    <!-- 主要内容 -->
+    <div class="p-4">
+        <!-- 顶部导航 -->
+        <div class="flex items-center mb-6">
+            <button class="text-gray-600">
+                <i class="fas fa-arrow-left"></i>
+            </button>
+            <h1 class="text-xl font-bold mx-auto">上传视频</h1>
+        </div>
+
+        <!-- 上传区域 -->
+        <div class="upload-area p-6 text-center mb-6">
+            <div class="mb-4">
+                <i class="fas fa-cloud-upload-alt text-4xl text-gray-400"></i>
+            </div>
+            <p class="text-gray-600 mb-2">点击或拖拽视频文件到此处</p>
+            <p class="text-sm text-gray-400">支持 MP4、MOV 格式，最大 500MB</p>
+        </div>
+
+        <!-- 视频预览 -->
+        <div class="video-preview mb-6">
+            <div class="w-full h-full flex items-center justify-center bg-gray-800">
+                <i class="fas fa-play text-white text-4xl"></i>
+            </div>
+        </div>
+
+        <!-- 视频信息 -->
+        <div class="bg-white rounded-xl p-4 shadow-sm mb-6">
+            <div class="space-y-4">
+                <div class="flex justify-between items-center">
+                    <span class="text-gray-600">视频时长</span>
+                    <span class="font-medium">00:30</span>
+                </div>
+                <div class="flex justify-between items-center">
+                    <span class="text-gray-600">文件大小</span>
+                    <span class="font-medium">25.6MB</span>
+                </div>
+                <div class="flex justify-between items-center">
+                    <span class="text-gray-600">分辨率</span>
+                    <span class="font-medium">1920x1080</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- 处理选项 -->
+        <div class="bg-white rounded-xl p-4 shadow-sm mb-6">
+            <h2 class="text-lg font-semibold mb-4">处理选项</h2>
+            <div class="space-y-4">
+                <div class="flex items-center justify-between">
+                    <div>
+                        <h3 class="font-medium">智能去字幕</h3>
+                        <p class="text-sm text-gray-500">自动识别并去除视频中的字幕</p>
+                    </div>
+                    <div class="flex items-center space-x-2">
+                        <span class="text-sm text-gray-500">¥0.5/分钟</span>
+                        <button class="bg-blue-500 text-white w-8 h-8 rounded-full flex items-center justify-center">
+                            <i class="fas fa-check"></i>
+                        </button>
+                    </div>
+                </div>
+                <div class="flex items-center justify-between">
+                    <div>
+                        <h3 class="font-medium">高级修复</h3>
+                        <p class="text-sm text-gray-500">智能填充字幕区域，保持画面自然</p>
+                    </div>
+                    <div class="flex items-center space-x-2">
+                        <span class="text-sm text-gray-500">会员专享</span>
+                        <button class="bg-gray-200 text-gray-500 w-8 h-8 rounded-full flex items-center justify-center">
+                            <i class="fas fa-lock"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- 操作按钮 -->
+        <div class="fixed bottom-0 left-0 right-0 p-4 bg-white shadow-lg">
+            <button class="w-full bg-blue-500 text-white py-3 rounded-full font-medium">
+                开始处理
+            </button>
+        </div>
+    </div>
+</body>
+</html>
